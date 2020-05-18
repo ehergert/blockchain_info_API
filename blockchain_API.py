@@ -16,7 +16,7 @@ def Get_Block_By_Hash(block_hash):
     return data
 
 def Get_Transaction_By_Hash(tx_hash):
-    url='http://blockchain.info/rawtx/{}?format=json'.format(block_hash)
+    url='http://blockchain.info/rawtx/{}?format=json'.format(tx_hash)
     with requests.Session() as s:
         data=s.get(url).json()
     return data
